@@ -32,13 +32,13 @@ ORDER BY hire_date ASC
 LIMIT 5;
 
 -- 4. Answer Below
--- Limit is the lines of sentences and offset is the pages in analagoy. 5 is the limit and 10 is the number of pages.
+-- Limit is the lines of sentences and offset is the pages in analagoy. 5 is the limit and 10 is the number of pages.45 offset divided by 5 limit will put me on the 10th page, for line 46-50 as output.
 SELECT DISTINCT *
 FROM employees
 WHERE hire_date LIKE '199%'
 AND birth_date LIKE '%12-25'
 ORDER BY hire_date ASC
-LIMIT 5 OFFSET 50;
+LIMIT 5 OFFSET 45;
 
 
 
