@@ -7,13 +7,13 @@ SELECT database();
 SELECT *
 FROM employees;
 
--- 2. Answer: Irena Reutenauer
+-- 2. Answer: Irena Reutenauer and Vidya Simmen
 SELECT *
 FROM employees
 WHERE first_name IN ('Irena','Vidya','Maya')
 ORDER BY first_name ASC;
 
--- 3.Answer: IRENA ACTON and IVidya Zweizig
+-- 3.Answer: IRENA ACTON and Vidya Zweizig
 SELECT *
 FROM employees
 WHERE first_name IN ('Irena','Vidya','Maya')
