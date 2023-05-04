@@ -39,6 +39,7 @@ SELECT MAX(salary) AS Smallest_Salary
 FROM salaries;
 
 
+
 -- 7. Answer Below
 --
 SELECT 
@@ -57,6 +58,8 @@ SELECT
     birth_date AS  "BIRTH DATE"
 FROM
     employees;
+    
+
 
 
 

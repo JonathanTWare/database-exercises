@@ -1,4 +1,5 @@
 -- 1. Creat SQL file
+USE employees;
 
 SHOW DATABASES;
 
@@ -8,8 +9,6 @@ FROM titles;
 SELECT DISTINCT title
 FROM titles;
 
-SELECT COUNT(DISTINCT title)
-FROM titles;
 
 -- 3.  Answer Below
 
@@ -19,10 +18,11 @@ WHERE last_name LIKE 'E%E'
 GROUP BY last_name;
 
 -- 4. Answer belpw
-SELECT first_name, last_name
+SELECT first_name, last_name, COUNT(*) AS how_many
 FROM employees
 WHERE last_name LIKE 'E%E' 
-GROUP BY first_name, last_name;
+GROUP BY first_name, last_name
+ORDER BY how_many DESC;
 
 -- 5. Chleq, Lindqvist, and Qiwen
 SELECT last_name
