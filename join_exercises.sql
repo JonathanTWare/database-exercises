@@ -1,17 +1,43 @@
 SHOW DATABASES;
 
-USE employees;
+-- ***PART ONE*** --
 
-SELECT*
-FROM employees;
+-- 1. 
+USE join_example_db;
+
+SHOW TABLES;
+
+SELECT *
+FROM users;
+
+SELECT *
+FROM roles;
+-- 2a.
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+LEFT JOIN roles ON users.role_id = roles.id;
+
+-- 2b.
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+RIGHT JOIN roles ON users.role_id = roles.id;
+
+-- 3.
 
 
-SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
-FROM employees AS e
-JOIN dept_emp AS de
-  ON de.emp_no = e.emp_no
-JOIN departments AS d
-  ON d.dept_no = de.dept_no
+
+
+-- ***PART TWO*** --
+
+-- 1. .
+
+
+
+
+
+
+
+
 
 
 
