@@ -86,12 +86,14 @@ SELECT t.title, COUNT(t.emp_no) AS No_of_Emp
 FROM titles AS t
 JOIN dept_emp AS dp ON dp.emp_no = t.emp_no
 JOIN departments AS d ON d.dept_no = dp.dept_no
-WHERE dp.to_date LIKE '9999%' AND d.dept_name = 'Customer Service'
-GROUP BY t.title;
+WHERE t.to_date LIKE '9999%' AND  dp.to_date > NOW() AND d.dept_name = 'Customer Service'
+GROUP BY t.title
+ORDER BY t.title;
 
 -- 5.
 
 USE employees;
+
 
 
 SELECT *
@@ -183,6 +185,7 @@ JOIN departments AS d ON de.dept_no = d.dept_no
 JOIN dept_manager AS dm ON de.dept_no = dm.dept_no
 JOIN employees AS m ON dm.emp_no = m.emp_no
 WHERE de.to_date = '9999-01-01' AND dm.to_date = '9999-01-01';
+
 
 
 
